@@ -78,7 +78,7 @@ Wyciągnięcie najbardziej wartościowych komponentów z ReflectumEngine do osob
 - `BEST_PRACTICES.md` - najlepsze praktyki
 - `CI_EXPLAINED.md` - wyjaśnienie CI/CD
 - `SUMMARY.md` - podsumowanie
-- Dokumentacja XML dla wszystkich publicznych API
+- Komentarze XML w kodzie dla wszystkich publicznych API (generowane do .xml podczas builda)
 
 ### 5. Przygotowanie do Git ✅
 

@@ -106,7 +106,7 @@ services.AddSemanticSpace(options =>
 });
 ```
 
-## Pełna dokumentacja XML
+## Komentarze XML w kodzie
 
-Wszystkie publiczne typy i metody mają dokumentację XML. Użyj IntelliSense w IDE aby zobaczyć pełną dokumentację.
+Wszystkie publiczne typy i metody mają komentarze XML w kodzie źródłowym. Użyj IntelliSense w IDE (Visual Studio, Rider, VS Code) aby zobaczyć pełną dokumentację podczas kodowania. Komentarze XML są automatycznie generowane do plików .xml podczas builda (gdy `<GenerateDocumentationFile>true</GenerateDocumentationFile>` jest włączone).
 

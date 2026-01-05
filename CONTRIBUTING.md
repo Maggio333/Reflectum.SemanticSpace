@@ -20,7 +20,7 @@ Dziękujemy za zainteresowanie projektem! Oto jak możesz pomóc.
 ## Zasady kodu
 
 - Zgodność z SOLID
-- Dokumentacja XML dla publicznych API
+- Komentarze XML w kodzie dla publicznych API
 - Testy jednostkowe dla nowych funkcji
 - Formatowanie zgodne z .NET conventions
 
@@ -45,7 +45,7 @@ Przed wysłaniem PR upewnij się że:
 - ✅ Wszystkie testy przechodzą (`dotnet test`)
 - ✅ Kod się kompiluje bez błędów
 - ✅ Nie ma ostrzeżeń kompilatora
-- ✅ Dokumentacja XML jest kompletna dla nowych publicznych API
+- ✅ Komentarze XML w kodzie są kompletne dla nowych publicznych API
 - ✅ Nowe funkcje mają odpowiednie testy jednostkowe
 - ✅ Testy używają Moq do mockowania zależności
 

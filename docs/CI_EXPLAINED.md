@@ -46,7 +46,7 @@ Gdy pushujesz do `main`:
 CI sprawdza:
 - ✅ Czy kod się kompiluje bez błędów
 - ✅ Czy nie ma ostrzeżeń
-- ✅ Czy dokumentacja XML jest kompletna
+- ✅ Czy komentarze XML w kodzie są kompletne
 
 ## Jak to działa?
 

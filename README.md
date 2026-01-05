@@ -1,10 +1,10 @@
 # Reflectum.SemanticSpace
 
-[![CI](https://github.com/Maggio333/Reflectum.SemanticSpace/workflows/CI/badge.svg)](https://github.com/Maggio333/Reflectum.SemanticSpace/actions)
+[![CI](https://github.com/Maggio333/Reflectum.SemanticSpace/actions/workflows/ci.yml/badge.svg)](https://github.com/Maggio333/Reflectum.SemanticSpace/actions)
 [![NuGet](https://img.shields.io/nuget/v/Reflectum.SemanticSpace.svg)](https://www.nuget.org/packages/Reflectum.SemanticSpace)
 [![Tests](https://img.shields.io/badge/tests-87%20passed-brightgreen)](https://github.com/Maggio333/Reflectum.SemanticSpace/actions)
 
-Biblioteka .NET do pracy z przestrzenią semantyczną i wykrywania powtórzeń w interakcjach tekstowych. Wyciągnięte z projektu [ReflectumEngine](../ReflectumEngine) - najbardziej wartościowe komponenty bez danych behawioralnych.
+Biblioteka .NET do pracy z przestrzenią semantyczną i wykrywania powtórzeń w interakcjach tekstowych. Wyciągnięte z projektu ReflectumEngine - najbardziej wartościowe komponenty bez danych behawioralnych.
 
 ## 🎯 Po co to komu?
 
@@ -24,7 +24,7 @@ Biblioteka .NET do pracy z przestrzenią semantyczną i wykrywania powtórzeń w
 - ✅ **Rozszerzalność** - interfejsy umożliwiają własne implementacje
 - ✅ **Testowalność** - łatwe mockowanie, brak zależności zewnętrznych
 - ✅ **Testy jednostkowe** - 87 testów pokrywających wszystkie komponenty (100% passing)
-- ✅ **Dokumentacja** - kompletna dokumentacja XML i markdown
+- ✅ **Dokumentacja** - kompletna dokumentacja markdown (docs/) i komentarze XML w kodzie (IntelliSense)
 
 ## 📦 Instalacja
 
@@ -87,6 +87,8 @@ foreach (var word in similar)
 ### 4. Wykrywanie powtórzeń
 
 ```csharp
+using Reflectum.SemanticSpace.Domain.Interfaces;
+
 var detector = serviceProvider.GetRequiredService<IAntiLoopService>();
 
 if (detector.IsEcho("Cześć, jak się masz?", threshold: 0.85f))
@@ -98,6 +100,9 @@ if (detector.IsEcho("Cześć, jak się masz?", threshold: 0.85f))
 ### 5. Porównywanie wektorów
 
 ```csharp
+using Reflectum.SemanticSpace.Domain.Entities;
+using Reflectum.SemanticSpace.Domain.Interfaces;
+
 var cache = serviceProvider.GetRequiredService<IVectorCache>();
 var tokenizer = serviceProvider.GetRequiredService<ITextTokenizer>();
 var calculator = serviceProvider.GetRequiredService<ISimilarityCalculator>();
@@ -140,7 +145,7 @@ Biblioteka została zaprojektowana zgodnie z **Clean Architecture** i zasadami *
 - `ISemanticSearchService` - wyszukiwanie semantyczne (Application)
 - `ISimilarityCalculator` - obliczanie podobieństwa (Domain)
 - `IResonanceCalculator` - obliczanie rezonansu (Application)
-- `AntiLoopService` - wykrywanie powtórzeń (Application)
+- `IAntiLoopService` - wykrywanie powtórzeń (Application)
 
 Zobacz [ARCHITECTURE.md](docs/ARCHITECTURE.md) dla szczegółów.
 
@@ -218,8 +223,9 @@ MIT License - zobacz [LICENSE](LICENSE)
 
 ## 🔗 Linki
 
-- [ReflectumEngine](../ReflectumEngine) - oryginalny projekt
-- [Analiza klas](../ReflectumEngine/docs/analiza-klas.md) - szczegółowa analiza komponentów
+- [GitHub Repository](https://github.com/Maggio333/Reflectum.SemanticSpace) - kod źródłowy
+- [Issues](https://github.com/Maggio333/Reflectum.SemanticSpace/issues) - zgłoś problem lub zaproponuj funkcję
+- [Releases](https://github.com/Maggio333/Reflectum.SemanticSpace/releases) - wersje biblioteki
 
 ## 👤 Autor
 

@@ -18,7 +18,7 @@ a projekt adheres to [Semantic Versioning](https://semver.org/lang/pl/).
 - **CosineSimilarity** - metryka podobieństwa cosinusowego
 - **ResonanceCalculator** - obliczanie rezonansu między zbiorami
 - **Testy jednostkowe** - 87 testów pokrywających wszystkie komponenty (xUnit, Moq)
-- **Dokumentacja** - kompletna dokumentacja XML i markdown
+- **Dokumentacja** - kompletna dokumentacja markdown (docs/) i komentarze XML w kodzie
 - **CI/CD** - automatyczne testy i tworzenie pakietów (GitHub Actions)
 - **Przykłady** - przykłady użycia z DI
 

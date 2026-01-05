@@ -40,7 +40,7 @@
 - **API.md** - pełna dokumentacja API
 - **BEST_PRACTICES.md** - najlepsze praktyki
 - **CI_EXPLAINED.md** - wyjaśnienie CI/CD
-- Dokumentacja XML dla wszystkich publicznych API
+- Komentarze XML w kodzie dla wszystkich publicznych API (generowane do .xml podczas builda)
 
 ### ✅ 4. Przygotowanie do Git
 
