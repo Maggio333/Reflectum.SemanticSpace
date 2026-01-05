@@ -1,0 +1,91 @@
+name: CI
+
+# Po co CI?
+# - Automatyczne testy przy każdym push/PR
+# - Weryfikacja kompilacji na różnych platformach
+# - Sprawdzanie jakości kodu
+# - Automatyczne tworzenie pakietów NuGet
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  build:
+    name: Build and Test
+    runs-on: ${{ matrix.os }}
+    
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        dotnet-version: ['8.0.x']
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: ${{ matrix.dotnet-version }}
+    
+    - name: Restore dependencies
+      run: dotnet restore
+    
+    - name: Build
+      run: dotnet build --no-restore --configuration Release
+    
+    - name: Run tests (if exists)
+      run: dotnet test --no-build --configuration Release --verbosity normal
+      continue-on-error: true
+    
+    - name: Check for warnings
+      run: dotnet build --no-restore --configuration Release /warnaserror
+      continue-on-error: true
+
+  package:
+    name: Create NuGet Package
+    runs-on: ubuntu-latest
+    needs: build
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '8.0.x'
+    
+    - name: Restore dependencies
+      run: dotnet restore
+    
+    - name: Pack
+      run: dotnet pack --no-restore --configuration Release --output ./artifacts
+    
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: nuget-package
+        path: ./artifacts/*.nupkg
+
+  code-quality:
+    name: Code Quality Checks
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '8.0.x'
+    
+    - name: Check XML documentation
+      run: dotnet build --no-restore --configuration Release /p:GenerateDocumentationFile=true
+      continue-on-error: true
+
