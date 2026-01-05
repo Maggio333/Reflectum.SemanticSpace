@@ -1,7 +1,7 @@
 # Reflectum.SemanticSpace
 
 [![CI](https://github.com/Maggio333/Reflectum.SemanticSpace/actions/workflows/ci.yml/badge.svg)](https://github.com/Maggio333/Reflectum.SemanticSpace/actions)
-[![NuGet](https://img.shields.io/nuget/v/Reflectum.SemanticSpace.svg)](https://www.nuget.org/packages/Reflectum.SemanticSpace)
+[![NuGet](https://img.shields.io/nuget/vpre/Reflectum.SemanticSpace.svg?label=NuGet&color=blue)](https://www.nuget.org/packages/Reflectum.SemanticSpace)
 [![Tests](https://img.shields.io/badge/tests-87%20passed-brightgreen)](https://github.com/Maggio333/Reflectum.SemanticSpace/actions)
 
 Biblioteka .NET do pracy z przestrzenią semantyczną i wykrywania powtórzeń w interakcjach tekstowych. Wyciągnięte z projektu ReflectumEngine - najbardziej wartościowe komponenty bez danych behawioralnych.
@@ -27,6 +27,8 @@ Biblioteka .NET do pracy z przestrzenią semantyczną i wykrywania powtórzeń w
 - ✅ **Dokumentacja** - kompletna dokumentacja markdown (docs/) i komentarze XML w kodzie (IntelliSense)
 
 ## 📦 Instalacja
+
+> **Uwaga**: Pakiet NuGet nie został jeszcze opublikowany na nuget.org. Badge pokazuje "package not found" dopóki nie opublikujesz pakietu. Użyj instalacji z kodu źródłowego.
 
 ### NuGet (gdy opublikowane)
 

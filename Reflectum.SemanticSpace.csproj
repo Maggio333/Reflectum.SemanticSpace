@@ -11,7 +11,9 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <RepositoryUrl>https://github.com/Maggio333/Reflectum.SemanticSpace</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/Maggio333/Reflectum.SemanticSpace</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReleaseNotes>Initial release: Clean Architecture, SOLID, 87 unit tests, comprehensive documentation</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
