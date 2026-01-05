@@ -39,7 +39,7 @@ dotnet add package Reflectum.SemanticSpace
 ### Z kodu źródłowego
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/Maggio333/Reflectum.SemanticSpace.git
 cd Reflectum.SemanticSpace
 dotnet build
 ```

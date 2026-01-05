@@ -70,7 +70,7 @@ CI sprawdza:
 
 W README widzisz:
 ```
-[![CI](https://github.com/.../badge.svg)](...)
+[![CI](https://github.com/Maggio333/Reflectum.SemanticSpace/actions/workflows/ci.yml/badge.svg)](https://github.com/Maggio333/Reflectum.SemanticSpace/actions)
 ```
 
 To pokazuje status ostatniego builda:

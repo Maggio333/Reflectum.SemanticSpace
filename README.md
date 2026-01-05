@@ -28,7 +28,7 @@ Biblioteka .NET do pracy z przestrzenią semantyczną i wykrywania powtórzeń w
 
 ## 📦 Instalacja
 
-> **Uwaga**: Pakiet NuGet nie został jeszcze opublikowany na nuget.org. Badge pokazuje "package not found" dopóki nie opublikujesz pakietu. Użyj instalacji z kodu źródłowego.
+> **Uwaga**: Pakiet NuGet jest w trakcie walidacji na nuget.org (może potrwać do godziny). Po zakończeniu walidacji badge automatycznie się zaktualizuje.
 
 ### NuGet (gdy opublikowane)
 
