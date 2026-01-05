@@ -31,6 +31,17 @@ a projekt adheres to [Semantic Versioning](https://semver.org/lang/pl/).
 - Zależności od danych behawioralnych (formuły, nasiona)
 - Zależności od konkretnych implementacji
 
+## [1.0.1] - 2025-01-05
+
+### Fixed
+- Updated repository URLs - removed placeholders
+- Fixed documentation references (markdown vs XML comments)
+- Updated NuGet package metadata (PackageProjectUrl, PackageReleaseNotes)
+
+### Changed
+- Updated README with correct repository links
+- Updated documentation files with proper URLs
+
 ## [Unreleased]
 
 ### Planned
